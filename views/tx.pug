@@ -24,29 +24,29 @@ block content
               tr.table-success
                   td=confirms
                   td.d-xs-none 
-                    a(href='/block/#{tx.blockhash}')=tx.blockhash
+                    a(href='/block/'+tx.blockhash)=tx.blockhash
                   td=time
                   td.view_tx  
-                    a(href='/block/#{tx.blockhash}')
+                     a(href='/block/'+tx.blockhash)
                       span.glyphicon.glyphicon-eye-open 
             else
               if confirms < (confirmations / 2)
                 tr.table-danger
                   td=confirms
                   td.d-xs-none  
-                    a(href='/block/#{tx.blockhash}')=tx.blockhash
+                    a(href='/block/' +tx.blockhash)=tx.blockhash
                   td=time
                   td.view_tx  
-                    a(href='/block/#{tx.blockhash}')
+                     a(href='/block/'+tx.blockhash)
                       span.glyphicon.glyphicon-eye-open 
               else
                 tr.table-warning
                   td=confirms
                   td.d-xs-none  
-                    a(href='/block/#{tx.blockhash}')=tx.blockhash
+                    a(href='/block/' +tx.blockhash)=tx.blockhash
                   td=time
                   td.view_tx  
-                    a(href='/block/#{tx.blockhash}')
+                    a(href='/block/'+tx.blockhash)
                       span.glyphicon.glyphicon-eye-open
     if tx.vout.length < 1
       .alert.alert-info(role='alert', style='text-align:center;')   
